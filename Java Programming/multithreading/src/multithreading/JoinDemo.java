@@ -1,4 +1,4 @@
-package multithreading;
+Pianpackage multithreading;
 
 import java.util.Scanner;
 
