@@ -11,5 +11,6 @@ public class vector {
         vector.add(40);
         vector.add(50);
         System.out.println(vector);
+        vector.hashCode();
     }
 }
