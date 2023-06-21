@@ -1,6 +1,5 @@
 package list;
 
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class Demo implements Comparator<Demo> {
@@ -51,20 +50,9 @@ public class Demo implements Comparator<Demo> {
                 new Demo(333,"Maida","NY"),
                 new Demo(222,"Zakir","PA")
         };
-        System.out.println("Before sorting");
-        for (Demo a : arr){
-            System.out.println(a);
-        }
-        System.out.println("After Sorting");
-        Arrays.sort(arr,0,3, new Demo());
-        for (Demo a : arr){
-            System.out.println(a);
-        }
-        System.out.println("Another sort");
-        Arrays.sort(arr, new SortByRoll());
-        for (Demo b : arr){
-            System.out.println(b);
-        }
+       for (Demo a : arr){
+           System.out.println(a);
+       }
     }
 }
 class SortByRoll implements Comparator<Demo> {
