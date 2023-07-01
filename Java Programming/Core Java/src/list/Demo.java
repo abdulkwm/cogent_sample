@@ -1,63 +1,19 @@
 package list;
 
-import java.util.Comparator;
-
-public class Demo implements Comparator<Demo> {
-    int rollNo;
-    String name;
-    String address;
-
-    public Demo(int rollNo, String name, String address) {
-        this.rollNo = rollNo;
-        this.name = name;
-        this.address = address;
-    }
-
-    public Demo() {
-
-    }
-
-    public int getRollNo() {
-        return rollNo;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    @Override
-    public String toString() {
-        return "Demo{" +
-                "rollNo=" + rollNo +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
-
-    @Override
-    public int compare(Demo o1, Demo o2) {
-        return o1.rollNo - o2.rollNo;
-    }
-
+public class Demo {
     public static void main(String[] args) {
-        Demo[] arr = {
-                new Demo(444,"Tuba","TX"),
-                new Demo(111,"Abdu","OH"),
-                new Demo(333,"Maida","NY"),
-                new Demo(222,"Zakir","PA")
-        };
-       for (Demo a : arr){
-           System.out.println(a);
-       }
-    }
-}
-class SortByRoll implements Comparator<Demo> {
-    @Override
-    public int compare(Demo o1, Demo o2) {
-        return o2.rollNo - o1.rollNo;
+        int[] a = {10,20,30,40,12,32};
+        int num = 10;
+        boolean flag = false;
+        for (int i = 0; i < a.length; i++){
+            if (num == a[i]){
+                System.out.println("element found at index " + i);
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false){
+            System.out.println("element is not found");
+        }
     }
 }
